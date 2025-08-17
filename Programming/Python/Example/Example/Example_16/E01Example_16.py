@@ -1,7 +1,7 @@
 import os
 import sys
 
-from Example.Example_16.CCharacter import CCharacter
+from Example.Example_16.CWidget import CWidget
 
 """
 클래스 (Class) 란?
@@ -53,25 +53,24 @@ def start(args):
 	매개 변수가 존재 할 경우 반드시 매개 변수의 개수만큼 데이터를 전달 할 필요가 있다. (+ 즉,
 	매개 변수와 입력 데이터의 개수가 일치하지 않으면 컴파일 에러가 발생한다는 것을 알 수 있다.)
 	"""
-	oCharacterA = CCharacter()
+	oWidgetA = CWidget()
 	
 	"""
 	. (멤버 지정 연산자) 란?
-	- 모듈이나 클래스 하위에 접근 할 수 있는 연산자를 의미한다. (+ 즉, 객체를 대상으로
-	멤버 지정 연산자를 사용 할 경우 객체 하위에 존재하는 멤버에 접근하는 것이 가능하다.)
+	- 모듈이나 클래스 하위에 접근 할 수 있는 연산자를 의미한다. (+ 즉, 객체를 대상으로 멤버 지정 연산자를
+	사용 할 경우 객체 하위에 존재하는 멤버에 접근하는 것이 가능하다.)
 	"""
-	oCharacterA.m_nLv = 1
+	oWidgetA.m_nLv = 1
+	oWidgetA.m_nHp = 10
+	oWidgetA.m_nAtk = 5
 	
-	oCharacterA.m_nHp = 10
-	oCharacterA.m_nAtk = 5
+	oWidgetB = CWidget()
+	oWidgetB.m_nLv = 10
+	oWidgetB.m_nHp = 150
+	oWidgetB.m_nAtk = 50
 	
-	oCharacterB = CCharacter()
-	oCharacterB.m_nLv = 10
-	oCharacterB.m_nHp = 150
-	oCharacterB.m_nAtk = 50
+	print("=====> 위젯 - A <=====")
+	oWidgetA.showInfo()
 	
-	print("=====> 캐릭터 - A <=====")
-	oCharacterA.showInfo()
-	
-	print("\n=====> 캐릭터 - B <=====")
-	oCharacterB.showInfo()
+	print("\n=====> 위젯 - B <=====")
+	oWidgetB.showInfo()

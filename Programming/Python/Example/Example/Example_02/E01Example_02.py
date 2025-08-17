@@ -84,22 +84,6 @@ nVal_01 변수와 01_nVal 변수는 변수 이름에 숫자가 들어갔지만 n
 
 # Example 2 (자료형)
 def start(args):
-	nValA = 10
-	nValB = nValA
-	
-	nValB = 20
-	print("Val A : {0}, Val B : {0}".format(nValA, nValB))
-	
-	oListA = [1,2,3]
-	oListB = oListA
-	
-	oListB[0] = 10
-	
-	oListB = [100,200,300]
-	oListB[0] = 10
-	
-	print(f"List A : {oListA}, List B : {oListB}\n")
-	
 	nInt = 10
 	fFloat = 3.14
 	

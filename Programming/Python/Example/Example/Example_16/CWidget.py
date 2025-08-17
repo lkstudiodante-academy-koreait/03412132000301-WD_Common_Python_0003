@@ -2,8 +2,8 @@ import os
 import sys
 
 
-# 캐릭터
-class CCharacter:
+# 위젯
+class CWidget:
 	# 초기화
 	def __init__(self):
 		"""
@@ -45,9 +45,8 @@ class CCharacter:
 		아래와 같이 self 를 활용하면 멤버 변수를 선언하는 것이 가능하다. (+ 즉, self 를 통해 선언 된 변수는
 		지역 변수가 아니라 멤버 변수라는 것을 알 수 있다.)
 		"""
-		self.m_nLv = 0
-		self.m_nHp = 0
-		self.m_nAtk = 0
+		self.m_nVal = 0
+		self.m_fVal = 0.0
 	
 	
 	# 정보를 출력한다
@@ -58,6 +57,5 @@ class CCharacter:
 		단, 선언 되지 않은 멤버 변수에 접근 할 경우 내부적으로 예외가 발생하기 때문에 주의가 필요하다. (+ 즉,
 		선언 되지 않은 변수에 접근 할 때와 같은 결과라는 것을 알 수 있다.)
 		"""
-		print(f"레벨 : {self.m_nLv}")
-		print(f"체력 : {self.m_nHp}")
-		print(f"공격력 : {self.m_nAtk}")
+		print(f"정수 : {self.m_nVal}")
+		print(f"실수 : {self.m_fVal}")
