@@ -41,7 +41,7 @@ def start(args):
 	
 	while i < nTimes:
 		# 짝수 일 경우
-		if i % 2 == 0:
+		if (i + 1) % 2 == 0:
 			i += 1
 			
 			"""
