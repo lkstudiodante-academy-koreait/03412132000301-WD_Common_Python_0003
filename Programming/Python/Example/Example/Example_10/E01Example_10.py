@@ -37,6 +37,12 @@ def start(args):
 	oListValuesB = [i + 1 for i in range(0, 10) if (i + 1) % 2 != 0]
 	oListValuesC = [i + j for i in range(0, 10) if (i + 1) % 2 != 0 for j in range(0, 10) if (j + 1) % 2 != 0]
 	
+	# for i in range(0, 10):
+	# 	if (i + 1) % 2 != 0:
+	# 		for j in range(0, 10):
+	# 			if (j + 1) % 2 != 0:
+	# 				oListValuesC.append(i + j)
+	
 	print("=====> 리스트 컴프리헨션 <=====")
 	print(f"리스트 A : {oListValuesA}")
 	print(f"리스트 B : {oListValuesB}")
@@ -48,6 +54,13 @@ def start(args):
 	oDictValuesA = {f"Key_{i + 1:02}": i + 1 for i in range(0, 10)}
 	oDictValuesB = {f"Key_{i + 1:02}": i + 1 for i in range(0, 10) if (i + 1) % 2 != 0}
 	oDictValuesC = {f"Key_{i + j:02}": i + j for i in range(0, 10) if (i + 1) % 2 != 0 for j in range(0, 10) if (j + 1) % 2 != 0}
+	
+	# for i in range(0, 10):
+	# 	if (i + 1) % 2 != 0:
+	# 		for j in range(0, 10):
+	# 			if (j + 1) % 2 != 0:
+	# 				oKey = f"Key_{i + j:02}"
+	# 				oDictValuesC[oKey] = i + j
 	
 	print("\n=====> 딕셔너리 컴프리헨션 <=====")
 	print(f"딕셔너리 A : {oDictValuesA}")
