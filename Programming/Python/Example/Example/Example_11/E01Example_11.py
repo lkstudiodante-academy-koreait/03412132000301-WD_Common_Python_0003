@@ -76,6 +76,10 @@ def start(args):
 	
 	nResult = getResult_Calc(nValA, oOperator, nValB)
 	print(f"결과 : {nResult}")
+	
+	print("\n=====> 지역 변수 vs 전역 변수 <=====")
+	incrVal(10)
+	incrVal(10)
 
 
 # 계산 결과를 반환한다
