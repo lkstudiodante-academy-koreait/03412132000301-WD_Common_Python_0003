@@ -60,14 +60,12 @@ def start(args):
 	- 모듈이나 클래스 하위에 접근 할 수 있는 연산자를 의미한다. (+ 즉, 객체를 대상으로 멤버 지정 연산자를
 	사용 할 경우 객체 하위에 존재하는 멤버에 접근하는 것이 가능하다.)
 	"""
-	oWidgetA.m_nLv = 1
-	oWidgetA.m_nHp = 10
-	oWidgetA.m_nAtk = 5
+	oWidgetA.m_nVal = 10
+	oWidgetA.m_fVal = 3.14
 	
 	oWidgetB = CWidget()
-	oWidgetB.m_nLv = 10
-	oWidgetB.m_nHp = 150
-	oWidgetB.m_nAtk = 50
+	oWidgetB.m_nVal = 20
+	oWidgetB.m_fVal = 3.14
 	
 	print("=====> 위젯 - A <=====")
 	oWidgetA.showInfo()
