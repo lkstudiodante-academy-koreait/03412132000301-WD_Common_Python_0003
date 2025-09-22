@@ -11,7 +11,7 @@ class CWidget:
 		
 	# 값을 반환한다
 	@property
-	def Val_Int(self):
+	def val_Int(self):
 		"""
 		@property 데코레이터란?
 		- Getter 프로퍼티를 구현 할 수 있는 역할을 수행하는 데코레이터를 의미한다. (+ 즉,
@@ -21,12 +21,12 @@ class CWidget:
 	
 	# 값을 반환한다
 	@property
-	def Val_Real(self):
+	def val_Real(self):
 		return self.m_fVal
 	
 	# 값을 변경한다
-	@Val_Int.setter
-	def Val_Int(self, a_nVal):
+	@val_Int.setter
+	def val_Int(self, a_nVal):
 		"""
 		위와 같이 setter 데코레이터를 활용하면 setter 프로퍼티를 구현하는 것이 가능하다. (+ 즉,
 		setter 데코레이터가 명시 된 함수는 변수에 데이터를 할당하듯이 명령문을 작성하는 것이 가능하다.)
@@ -34,12 +34,12 @@ class CWidget:
 		self.m_nVal = a_nVal
 		
 	# 값을 변경한다
-	@Val_Real.setter
-	def Val_Real(self, a_fVal):
+	@val_Real.setter
+	def val_Real(self, a_fVal):
 		self.m_fVal = a_fVal
 		
 	# 정보를 출력한다
 	def showInfo(self):
-		print(f"정수 : {self.Val_Int}")
-		print(f"실수 : {self.Val_Real}")
+		print(f"정수 : {self.val_Int}")
+		print(f"실수 : {self.val_Real}")
 		

@@ -20,15 +20,15 @@ class CSomeClass:
 		self.m_nVal = 0
 		
 	@property
-	def Val(self):
+	def val(self):
 		return m_nVal
 		
 	@Val.setter
-	def Val(self, a_nVal):
+	def val(self, a_nVal):
 		self.m_nVal = a_nVal
 		
 oSomeObj = CSomeClass()
-oSomeObj.Val = 10
+oSomeObj.val = 10
 
 위와 같이 @property 데코레이터와 setter 데코레이터를 활용하면 프로퍼티를 구현하는 것이 가능하다. (+ 즉,
 해당 데코레이터로 구현 된 함수는 변수처럼 데이터를 할당하거나 데이터를 가져오는 것이 가능하다.)
@@ -40,11 +40,11 @@ def start(args):
 	oWidgetA = CWidget()
 	oWidgetB = CWidget()
 	
-	oWidgetA.Val_Int = 10
-	oWidgetA.Val_Real = 3.14
+	oWidgetA.val_Int = 10
+	oWidgetA.val_Real = 3.14
 	
-	oWidgetB.Val_Int = 20
-	oWidgetB.Val_Real = 3.14
+	oWidgetB.val_Int = 20
+	oWidgetB.val_Real = 3.14
 	
 	print("=====> 위젯 - A <=====")
 	oWidgetA.showInfo()

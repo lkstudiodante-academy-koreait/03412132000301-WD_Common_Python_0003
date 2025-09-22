@@ -1,7 +1,8 @@
 import os
 import sys
 
-from Example.Example_20.CWidget import CWidget
+from Example.Example_20.CBase import CBase
+from Example.Example_20.CDerived import CDerived
 
 """
 Object 클래스란?
@@ -26,24 +27,32 @@ print 와 같은 함수를 사용해서 객체의 정보를 출력하는 것이 
 
 # Example 20 (클래스 - 5)
 def start(args):
-	oWidget = CWidget()
+	oBase = CBase(10, 3.14)
+	oDerived = CDerived(20, 3.14, "Hello, World!")
+	
+	print("=====> Object <=====")
+	print(dir(object))
+	
+	print("\n=====> 부모 클래스 <=====")
+	print(oBase)
+	
+	print("\n=====> 자식 클래스 <=====")
+	print(oDerived)
 	
 	"""
 	issubclass 함수란?
 	- 클래스가 특정 클래스를 상속하고 있는 검사하는 역할을 수행하는 함수를 의미한다. (+ 즉,
 	issubclass 함수를 활용하면 부모 클래스를 검사해서 제어하는 것이 가능하다.)
+	"""
+	print("\n=====> 캐스팅 결과 - A <=====")
+	print(f"Base issubclass object : {issubclass(CBase, object)}")
+	print(f"Derived issubclass object : {issubclass(CDerived, object)}")
 	
+	"""
 	isinstance 함수란?
 	- 객체가 특정 클래스로부터 생성 된 객체인지 검사하는 역할을 수행하는 함수를 의미한다. (+ 즉,
 	해당 함수를 활용하면 안전한 다운 캐스팅이 가능하다.)
 	"""
-	print("=====> 캐스팅 결과 <=====")
-	print(issubclass(CWidget, object))
-	print(isinstance(oWidget, object))
-	print(isinstance(oWidget, CWidget))
-	
-	print("\n=====> Object 정보 <=====")
-	print(dir(object))
-	
-	print("\n=====> 위젯 정보 <=====")
-	print(oWidget)
+	print("\n=====> 캐스팅 결과 - B <=====")
+	print(f"Base isinstance Derived : {isinstance(oBase, CDerived)}")
+	print(f"Derived isinstance Derived : {isinstance(oDerived, CDerived)}")
