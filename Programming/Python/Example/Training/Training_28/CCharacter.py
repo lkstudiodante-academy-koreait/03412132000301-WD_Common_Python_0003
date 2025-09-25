@@ -77,8 +77,9 @@ class CMonster_Named(CMonster):
 		
 	# 공격력을 반환한다
 	def getAtk(self):
-		print("-----> 크리티컬! <-----")
+		# 크리티컬 일 경우
+		if random.random() < 5.0:
+			return super().getAtk() * 2
 		
-		nAtk = super().getAtk()
-		return nAtk * 2 if random.random() >= 0.5 else nAtk
+		return super().getAtk()
 		

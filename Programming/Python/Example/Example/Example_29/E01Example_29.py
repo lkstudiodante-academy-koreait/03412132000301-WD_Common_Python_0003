@@ -147,25 +147,25 @@ def start(args):
 		oTree_BSearch.addVal(nVal)
 	
 	print("=====> 이진 탐색 트리 - 전위 순회 <=====")
-	oTree_BSearch.enumerate(CTree_BSearch.PRE_ORDER, printVal_BSearchTree)
+	oTree_BSearch.enumerate(CTree_BSearch.ORDER_PRE, printVal_BSearchTree)
 	
 	print("\n\n=====> 이진 탐색 트리 - 중위 순회 <=====")
-	oTree_BSearch.enumerate(CTree_BSearch.IN_ORDER, printVal_BSearchTree)
+	oTree_BSearch.enumerate(CTree_BSearch.ORDER_IN, printVal_BSearchTree)
 	
 	print("\n\n=====> 이진 탐색 트리 - 후위 순회 <=====")
-	oTree_BSearch.enumerate(CTree_BSearch.POST_ORDER, printVal_BSearchTree)
+	oTree_BSearch.enumerate(CTree_BSearch.ORDER_POST, printVal_BSearchTree)
 	
 	nVal_Remove = int(input("\n\n정수 입력 (제거) : "))
 	oTree_BSearch.removeVal(nVal_Remove)
 	
 	print("\n=====> 이진 탐색 트리 - 전위 순회 (제거 후) <=====")
-	oTree_BSearch.enumerate(CTree_BSearch.PRE_ORDER, printVal_BSearchTree)
+	oTree_BSearch.enumerate(CTree_BSearch.ORDER_PRE, printVal_BSearchTree)
 	
 	print("\n\n=====> 이진 탐색 트리 - 중위 순회 (제거 후) <=====")
-	oTree_BSearch.enumerate(CTree_BSearch.IN_ORDER, printVal_BSearchTree)
+	oTree_BSearch.enumerate(CTree_BSearch.ORDER_IN, printVal_BSearchTree)
 	
 	print("\n\n=====> 이진 탐색 트리 - 후위 순회 (제거 후) <=====")
-	oTree_BSearch.enumerate(CTree_BSearch.POST_ORDER, printVal_BSearchTree)
+	oTree_BSearch.enumerate(CTree_BSearch.ORDER_POST, printVal_BSearchTree)
 	
 	oTable_Hash = CTable_Hash()
 	

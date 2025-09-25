@@ -5,9 +5,9 @@ import sys
 # 이진 탐색 트리
 class CTree_BSearch:
 	# 순서
-	PRE_ORDER = 1
-	IN_ORDER = 2
-	POST_ORDER = 3
+	ORDER_PRE = 1
+	ORDER_IN = 2
+	ORDER_POST = 3
 	
 	# 노드
 	class CNode:
@@ -122,15 +122,15 @@ class CTree_BSearch:
 	# 트리를 순회한다
 	def enumerate(self, a_nOrder, a_oCallback):
 		# 전위 순회 일 경우
-		if a_nOrder == CTree_BSearch.PRE_ORDER:
+		if a_nOrder == CTree_BSearch.ORDER_PRE:
 			self.enumerate_ByPreOrder(self.m_oNode_Root, a_oCallback)
 		
 		# 중위 순회 일 경우
-		elif a_nOrder == CTree_BSearch.IN_ORDER:
+		elif a_nOrder == CTree_BSearch.ORDER_IN:
 			self.enumerate_ByInOrder(self.m_oNode_Root, a_oCallback)
 		
 		# 후위 순회 일 경우
-		elif a_nOrder == CTree_BSearch.POST_ORDER:
+		elif a_nOrder == CTree_BSearch.ORDER_POST:
 			self.enumerate_ByPostOrder(self.m_oNode_Root, a_oCallback)
 	
 	# 트리를 전위 순회한다

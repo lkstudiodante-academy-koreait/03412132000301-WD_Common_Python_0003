@@ -27,17 +27,22 @@ class CWnd_Main(QMainWindow, oCls_MainWnd):
 		self.m_oTimer.timeout.connect(self.onUpdate)
 		
 		self.m_oTimer.start(1)
+		self.m_oListCircles = []
+		
 		oPos = QPointF(self.geometry().width() / 2.0, self.geometry().height() / 2.0)
 		
-		"""
-		random 함수란?
-		- 0 ~ 1 범위의 실수를 반환하는 함수를 의미한다. (+ 즉, random 함수는 randrange 함수와 달리
-		실수 데이터가 반환 된다는 차이점이 존재한다.)
-		"""
-		oDirection = QVector2D(random.random() * 2.0 - 1.0, random.random() * 2.0 - 1.0)
-		
-		self.m_oCircle = CCircle(self, oPos, 50.0)
-		self.m_oCircle.m_oVelocity = oDirection.normalized() * 450.0
+		for i in range(0, 5):
+			"""
+			random 함수란?
+			- 0 ~ 1 범위의 실수를 반환하는 함수를 의미한다. (+ 즉, random 함수는 randrange 함수와 달리
+			실수 데이터가 반환 된다는 차이점이 존재한다.)
+			"""
+			oDirection = QVector2D(random.random() * 2.0 - 1.0, random.random() * 2.0 - 1.0)
+			
+			oCircle = CCircle(self, oPos, 50.0)
+			oCircle.m_oVelocity = oDirection.normalized() * 450.0
+			
+			self.m_oListCircles.append(oCircle)
 		
 		"""
 		datetime 클래스란?
@@ -62,7 +67,8 @@ class CWnd_Main(QMainWindow, oCls_MainWnd):
 		fTime_Delta = (datetime.now() - self.m_oPrevTime).total_seconds()
 		self.m_oPrevTime = datetime.now()
 		
-		self.m_oCircle.onUpdate(fTime_Delta)
+		for oCircle in self.m_oListCircles:
+			oCircle.onUpdate(fTime_Delta)
 		
 	# 메뉴를 설정한다
 	def setupMenu(self):
@@ -78,7 +84,8 @@ class CWnd_Main(QMainWindow, oCls_MainWnd):
 		oPainter = QPainter(self)
 		
 		try:
-			self.m_oCircle.onRender(oPainter)
+			for oCircle in self.m_oListCircles:
+				oCircle.onRender(oPainter)
 		
 		finally:
 			oPainter.end()
