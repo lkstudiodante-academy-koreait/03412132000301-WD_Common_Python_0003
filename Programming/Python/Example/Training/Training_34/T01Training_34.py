@@ -1,8 +1,6 @@
 import os
 import sys
 
-from pyasn1_modules.rfc6960 import ocspResponseMap
-
 from Training.Training_29.CException_Missing import CException_Missing
 from Training.Training_29.CException_Duplicate import CException_Duplicate
 
