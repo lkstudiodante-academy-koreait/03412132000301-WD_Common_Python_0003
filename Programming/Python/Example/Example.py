@@ -143,8 +143,8 @@ if __name__ == "__main__":
 	# E01Example_25.start(sys.argv)
 	# E01Example_26.start(sys.argv)
 	# E01Example_27.start(sys.argv)
-	E01Example_28.start(sys.argv)
-	# E01Example_29.start(sys.argv)
+	# E01Example_28.start(sys.argv)
+	E01Example_29.start(sys.argv)
 	
 	# T01Training_01.start(sys.argv)
 	# T01Training_02.start(sys.argv)

@@ -4,7 +4,8 @@ import sys
 import random
 
 from Example.Example_28.CList_Array import CList_Array
-from Example.Example_28.CList_Linked import CList_Linked
+from Example.Example_28.CList_SLinked import CList_SLinked
+from Example.Example_28.CList_DLinked import CList_DLinked
 
 """
 자료구조 (Data Structure) 란?
@@ -71,33 +72,40 @@ from Example.Example_28.CList_Linked import CList_Linked
 # Example 28 (자료구조 - 1)
 def start(args):
 	oListValuesA = CList_Array()
-	oListValuesB = CList_Linked()
+	oListValuesB = CList_SLinked()
+	oListValuesC = CList_DLinked()
 	
 	for i in range(0, 10):
 		nVal = random.randrange(1, 100)
 		
 		oListValuesA.addVal(nVal)
 		oListValuesB.addVal(nVal)
+		oListValuesC.addVal(nVal)
 	
 	print("=====> 리스트 <=====")
 	printValues(oListValuesA)
 	printValues(oListValuesB)
+	printValues(oListValuesC)
 	
 	nVal_Insert = int(input("\n정수 입력 (추가) : "))
 	oListValuesA.insertVal(0, nVal_Insert)
 	oListValuesB.insertVal(0, nVal_Insert)
+	oListValuesC.insertVal(0, nVal_Insert)
 	
 	print("\n=====> 리스트 - 추가 후 <=====")
 	printValues(oListValuesA)
 	printValues(oListValuesB)
+	printValues(oListValuesC)
 	
 	nVal_Remove = int(input("\n정수 입력 (제거) : "))
 	oListValuesA.removeVal(nVal_Remove)
 	oListValuesB.removeVal(nVal_Remove)
+	oListValuesC.removeVal(nVal_Remove)
 	
 	print("\n=====> 리스트 - 제거 후 <=====")
 	printValues(oListValuesA)
 	printValues(oListValuesB)
+	printValues(oListValuesC)
 
 
 # 값을 출력한다
